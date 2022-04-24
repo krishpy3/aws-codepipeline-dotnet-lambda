@@ -21,7 +21,8 @@ namespace Dotnetlambda4
         /// <returns></returns>
         public string FunctionHandler(string input, ILambdaContext context)
         {
-            return input?.ToUpper();
+            param = input["name"].Value<string>();
+            return param.ToUpper();
         }
     }
 }
